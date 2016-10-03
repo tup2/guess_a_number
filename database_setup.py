@@ -37,6 +37,6 @@ def setup_prize(engine):
 	session.commit()
 
 if __name__ == '__main__':
-	engine = create_engine('postgresql://stack:c#2016@127.0.0.1:5432/guess_num')
+	engine = create_engine('postgresql://user1:user1@127.0.0.1:5432/guess_num')
 	Base.metadata.create_all(engine)
 	setup_prize(engine)

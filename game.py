@@ -73,7 +73,6 @@ def guess(name, level=10):
 	is_winner = False
 
 	target = random.randint(0, level)
-	print(target)
 	count = 0
 	prize = query_prize(level)
 	while count < 5 and prize != 0:
@@ -100,7 +99,3 @@ def guess(name, level=10):
 
 if __name__ == '__main__':
 	log_on()
-
-
-
-

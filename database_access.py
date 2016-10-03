@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 from database_setup import Prize, Player
 
 Base = declarative_base()
-engine = create_engine('postgresql://stack:c#2016@127.0.0.1:5432/guess_num')
+engine = create_engine('postgresql://user1:user1@127.0.0.1:5432/guess_num')
 Session = sessionmaker(bind=engine)
 
 def query_prize(level):
@@ -62,11 +62,3 @@ def check_all_players():
 def get_password(name):
 	session = Session()
 	return session.query(Player).filter_by(name=name).first().password
-
-
-if __name__ == "__main__":
-	update_prizes_table()
-	print(query_prize(10))
-
-
-
